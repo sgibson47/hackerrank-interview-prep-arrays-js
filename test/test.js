@@ -2,6 +2,7 @@ const assert = require('chai').assert;
 const expect = require('chai').expect;
 const hourglassSum = require('../index').hourglassSum;
 const rotLeft = require('../index').rotLeft;
+const minimumBribes = require('../index').minimumBribes;
 
 describe("Array Practice", function(){
   describe("hourglassSum", function(){
@@ -64,6 +65,48 @@ describe("Array Practice", function(){
 
       it('should return array after rotations', function(){
         expect(resultCaseOne).to.eql([77, 97, 58, 1, 86, 58, 26, 10, 86, 51, 41, 73, 89, 7, 10, 1, 59, 58, 84, 77])
+      })
+    })
+  })
+
+  describe("New Years Chaos", function(){
+    describe("testCaseZeroA", function(){
+      let arrCaseZeroA = [2, 1, 5, 3, 4]
+
+      let resultCaseZeroA = minimumBribes(arrCaseZeroA)
+
+      it('should return min number of bribes', function(){
+        expect(resultCaseZeroA).to.eql(3)
+      })
+    })
+
+    describe("testCaseZeroB", function(){
+      let arrCaseZero = [2, 5, 1, 3, 4]
+
+      let resultCaseZero = minimumBribes(arrCaseZero)
+
+      it('should return "Too chaotic"', function(){
+        expect(resultCaseZero).to.eql("Too chaotic")
+      })
+    })
+
+    describe("testCaseOneA", function(){
+      let arrCaseOneA = [5, 1, 2, 3, 7, 8, 6, 4]
+
+      let resultCaseOneA = minimumBribes(arrCaseOneA)
+
+      it('should return "Too chaotic"', function(){
+        expect(resultCaseOneA).to.eql("Too chaotic")
+      })
+    })
+
+    describe("testCaseOneB", function(){
+      let arrCaseOneB = [1, 2, 5, 3, 7, 8, 6, 4]
+
+      let resultCaseOneB = minimumBribes(arrCaseOneB)
+
+      it('should return min number of bribes', function(){
+        expect(resultCaseOneB).to.eql(7)
       })
     })
   })
