@@ -15,5 +15,13 @@ module.exports = {
         }
     }
     return Math.max(...sums)
+  },
+
+  rotLeft: function(a, d){
+    for (let i = 0; i < d; i++) {
+        let oldFirstElem = a.shift()
+        a.push(oldFirstElem)
+    }
+    return a
   }
 }

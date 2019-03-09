@@ -1,5 +1,7 @@
 const assert = require('chai').assert;
+const expect = require('chai').expect;
 const hourglassSum = require('../index').hourglassSum;
+const rotLeft = require('../index').rotLeft;
 
 describe("Array Practice", function(){
   describe("hourglassSum", function(){
@@ -40,6 +42,28 @@ describe("Array Practice", function(){
 
       it('should return max hourglass sum', function(){
         assert.equal(resultCaseOne, 13)
+      })
+    })
+  })
+
+  describe("Left Rotation", function(){
+    describe("testCaseZero", function(){
+      let arrCaseZero = [1, 2, 3, 4, 5]
+
+      let resultCaseZero = rotLeft(arrCaseZero, 4)
+
+      it('should return array after rotations', function(){
+        expect(resultCaseZero).to.eql([5, 1, 2, 3, 4])
+      })
+    })
+
+    describe("testCaseOne", function(){
+      let arrCaseOne = [41, 73, 89, 7, 10, 1, 59, 58, 84, 77, 77, 97, 58, 1, 86, 58, 26, 10, 86, 51]
+
+      let resultCaseOne = rotLeft(arrCaseOne, 10)
+
+      it('should return array after rotations', function(){
+        expect(resultCaseOne).to.eql([77, 97, 58, 1, 86, 58, 26, 10, 86, 51, 41, 73, 89, 7, 10, 1, 59, 58, 84, 77])
       })
     })
   })
