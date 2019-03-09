@@ -45,5 +45,11 @@ module.exports = {
     }
     const sum = bribeCount.reduce((a, b) => a + b, 0)
     return sum;
+  }, 
+
+  minimumSwaps: function(arr){
+    
   }
+
+
 }

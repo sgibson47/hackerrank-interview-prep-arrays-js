@@ -3,6 +3,7 @@ const expect = require('chai').expect;
 const hourglassSum = require('../index').hourglassSum;
 const rotLeft = require('../index').rotLeft;
 const minimumBribes = require('../index').minimumBribes;
+const minimumSwaps = require('../index').minimumSwaps
 
 describe("Array Practice", function(){
   describe("hourglassSum", function(){
@@ -110,4 +111,37 @@ describe("Array Practice", function(){
       })
     })
   })
+
+  describe("Minimum Swas 2", function(){
+    describe("testCaseZero", function(){
+      let arrCaseZero = [4, 3, 1, 2]
+
+      let resultCaseZero = minimumSwaps(arrCaseZero)
+
+      it('should return min swaps', function(){
+        assert.equal(resultCaseZero, 3)
+      })
+    })
+
+    describe("testCaseOne", function(){
+      let arrCaseOne = [2, 3, 4, 1, 5]
+
+      let resultCaseOne = minimumSwaps(arrCaseOne)
+
+      it('should return min swaps', function(){
+        assert.equal(resultCaseOne, 3)
+      })
+    })
+
+    describe("testCaseTwo", function(){
+      let arrCaseTwo = [1, 3, 5, 2, 4, 6, 7]
+
+      let resultCaseTwo = minimumSwaps(arrCaseTwo)
+
+      it('should return min swaps', function(){
+        assert.equal(resultCaseTwo, 3)
+      })
+    })
+  })
+
 })
